@@ -39,17 +39,16 @@ This will start the Library Management System application and display the main m
 **SOLID Principles and Design Patterns:->**
 
 1)Single Responsibility Principle (SRP):
+The Book, EBook, Library, and LibraryManager classes each have a single responsibility, making the code more modular and maintainable.
 
-2)The Book, EBook, Library, and LibraryManager classes each have a single responsibility, making the code more modular and maintainable.
-Open/Closed Principle (OCP):
+2)Open/Closed Principle (OCP):
+The code is designed to be open for extension but closed for modification. For example, adding a new type of book can be done by creating a new subclass of Book without modifying the existing classes.
 
-3)The code is designed to be open for extension but closed for modification. For example, adding a new type of book can be done by creating a new subclass of Book without modifying the existing classes.
-
-4)Liskov Substitution Principle (LSP):
+3)Liskov Substitution Principle (LSP):
 The EBook class is a subclass of the Book class, and instances of EBook can be used wherever Book instances are expected, without breaking the application.
 
-5)Singleton Pattern:
+4)Singleton Pattern:
 The LibraryManager class is implemented using the Singleton pattern, ensuring that only one instance of the class exists in the application. This helps maintain the consistency and state of the library management system.
 
-6)Factory Pattern:
+5)Factory Pattern:
 The BookFactory class follows the Factory pattern, allowing the creation of either Book or EBook objects without exposing the specific implementation details to the LibraryManager class. This promotes flexibility and extensibility in the future.
